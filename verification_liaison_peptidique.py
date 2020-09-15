@@ -1,15 +1,15 @@
-def trouve_CA(nom):
+def trouve_C(nom):
 	with open(nom, "r") as filin1:
-		liste_CA = []
+		liste_C = []
 		for ligne1 in filin1:
-			dict_CA = {}
-			if ligne1.startswith("ATOM") and ligne1[12:16].strip() == "CA" :
-				dict_CA["resid"] = int(ligne1[6:11])
-				dict_CA["x"] = float(ligne1[30:38])
-				dict_CA["y"] = float(ligne1[38:46])
-				dict_CA["z"] = float(ligne1[46:54])
-				liste_CA.append(dict_CA)
-		return liste_CA
+			dict_C = {}
+			if ligne1.startswith("ATOM") and ligne1[12:16].strip() == "C" :
+				dict_C["resid"] = int(ligne1[6:11])
+				dict_C["x"] = float(ligne1[30:38])
+				dict_C["y"] = float(ligne1[38:46])
+				dict_C["z"] = float(ligne1[46:54])
+				liste_C.append(dict_C)
+		return liste_C
 
 def trouve_N(nom):
 	with open(nom, "r") as filin2:
@@ -42,14 +42,14 @@ if len(sys.argv) != 2:
 	sys.exit("ERREUR : il faut donner un argument a la commande !")
 print("Fichier {}".format(sys.argv[1]))
 fichier = sys.argv[1]
-liste1 = trouve_CA(fichier)
+liste1 = trouve_C(fichier)
 liste2 = trouve_N(fichier)
 print("CA",liste1[0])
 print("N",liste2[0])
-distance_liaison_CA_N = distance(liste1,liste2)
+distance_liaison_C_N = distance(liste1,liste2)
 count = 0
-for i in range(len(distance_liaison_CA_N)):
-	if (distance_liaison_CA_N[i] > 2.2) and (distance_liaison_CA_N[i] < 3) :
+for i in range(len(distance_liaison_C_N)):
+	if distance_liaison_C_N[i] < 3 :
 		count += 1
-if len(distance_liaison_CA_N) == count:
+if len(distance_liaison_C_N) == count:
 	print("Les {} liaisons peptidiques ne sont pas rompus".format(count))
