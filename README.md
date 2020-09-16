@@ -35,3 +35,5 @@ N, C, O et H. les données récupérées seront donc inscrites dans un fichier o
 
 le script 4: calc_energie.py  exécutable par la commande: 
   python calc_python.py fichier_H_perser.pdb
+le script s'appui sur le fichier parsé pour calculer les distances qui interviennent dans les liaison hydrogene (ici que pour les Helice alpha, les aures fonctionnalité n'en pas encore été implémenter). Ces distances sont ensuite utilisées pour le calcul d'énergie de liaison. le résultat est ensuite afficher 
+sur le terminal et inscrit dans un fichier output. la lettre H en fin de ligne correspondent aux atomes intervenant dans les helices Alpha.
