@@ -1,7 +1,0 @@
-
-==> exécuter le script pdbHydrogene.py pour ajouter les H:
-python pdbHydrogene.py 1est.pdb 2sga.pdb 7fab.pdb 2mhb.pdb 6ldh.pdb 
-
-
-==> verifier les liaison peptidique un par un 
-python verification_liaison_peptidique.py nom_fichier.pdb
