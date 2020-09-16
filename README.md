@@ -34,6 +34,20 @@ N, C, O et H. les données récupérées seront donc inscrites dans un fichier o
 
 
 le script 4: calc_energie.py  exécutable par la commande: 
-  python calc_python.py fichier_H_perser.pdb
+  python calc_python.py fichier_H_perser.txt
 le script s'appui sur le fichier parsé pour calculer les distances qui interviennent dans les liaison hydrogene (ici que pour les Helice alpha, les aures fonctionnalité n'en pas encore été implémenter). Ces distances sont ensuite utilisées pour le calcul d'énergie de liaison. le résultat est ensuite afficher 
 sur le terminal et inscrit dans un fichier output. la lettre H en fin de ligne correspondent aux atomes intervenant dans les helices Alpha.
+
+	III.	Description fichiers input et output:
+les fichiers input sont pour les scripts 1,2 et 3 des fichier .pdb et pour e script 4 un fichier.txt
+le fichier output qui nous interesse est celui du script 4 et c'est un fichier .txt qui nous permet de savoir grace à la marque "H" en fin de ligne qu'on a bien une Helice alpha.
+
+
+		IV.	Les modules et environnement requis:
+   • os: le but principal du module OS est d'interagir avec votre système d'exploitation. Très utile pour créer, supprimer ou déplacer des dossiers et parfois de changer ou trouver le répertoire de travail.
+      
+   • Sys: le module sys contient des fonctions et des variables spécifiques à l'interpréteur Python lui-même. Ce module est particulièrement intéressant pour récupérer les arguments passés à un script Python lorsque celui-ci est appelé en ligne de commande.
+   • Math: le module math est utile pour les manipulations des fonctions et constantes mathématiques de base (sin, cos, exp, pi...)
+   • Conda environnement avec python 3 et le programme reduce.3.24.130724 (reduce: version 3.24 07/24/2013, Copyright 1997-2013, J. Michael Word) installé.
+   
+
