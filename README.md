@@ -43,7 +43,7 @@ les fichiers input sont pour les scripts 1,2 et 3 des fichier .pdb et pour e scr
 le fichier output qui nous interesse est celui du script 4 et c'est un fichier .txt qui nous permet de savoir grace à la marque "H" en fin de ligne qu'on a bien une Helice alpha.
 
 
-		IV.	Les modules et environnement requis:
+	IV.	Les modules et environnement requis:
    • os: le but principal du module OS est d'interagir avec votre système d'exploitation. Très utile pour créer, supprimer ou déplacer des dossiers et parfois de changer ou trouver le répertoire de travail.
       
    • Sys: le module sys contient des fonctions et des variables spécifiques à l'interpréteur Python lui-même. Ce module est particulièrement intéressant pour récupérer les arguments passés à un script Python lorsque celui-ci est appelé en ligne de commande.
