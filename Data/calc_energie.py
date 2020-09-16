@@ -92,10 +92,11 @@ if __name__ == '__main__':
             residus = lecture1[i]["residu"], lecture1[i+12]["residu"] # ou +12, +16, +20
             if energie > -0.5:
             # H pour alpha Helix
-                print("{} {:18.3f} {:14.3f} {:14.3f} {:14.3f} {:14.3f} H".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
-                filout2.write("{} {} {} {} {} {} H\n".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
+                print("{} {:18.3f} {:14.3f} {:14.3f} {:14.3f} {:14.3f} ".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
+                filout2.write("{} {} {} {} {} {} \n".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
             else:
-                print("{} {:18.3f} {:14.3f} {:14.3f} {:14.3f} {:14.3f}".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
-                filout2.write("{} {} {} {} {} {}\n".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
+                print("{} {:18.3f} {:14.3f} {:14.3f} {:14.3f} {:14.3f} H\n".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
+                filout2.write("{} {} {} {} {} {} H\n".format(residus, dist_NO, dist_HC, dist_HO, dist_CN, energie))
 
             i += 12 # ou +12, +16, +20
+            
